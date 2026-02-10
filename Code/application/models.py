@@ -1,0 +1,39 @@
+from time import timezone
+from django.db import models
+from datetime import date
+
+
+# Create your models here.
+
+class enquiry_table(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.EmailField(max_length=255)
+    phone = models.CharField(max_length=10)
+    message = models.TextField()
+    dropdown = models.CharField(max_length=100)
+    date_field = models.DateField(default=date.today)
+    education = models.CharField(max_length=100, default=timezone)
+    skills = models.CharField(max_length=100, default=timezone)
+
+    def __str__(self):
+        return self.name
+
+
+class company_work_details(models.Model):
+    company_name = models.CharField(max_length=255)
+    address = models.TextField()
+    email = models.EmailField(max_length=255)
+    phone = models.CharField(max_length=10)
+    requirement = models.CharField(max_length=100)
+    payment = models.CharField(max_length=100)
+    date_field = models.DateField(default=date.today)
+
+    def __str__(self):
+        return self.company_name
+
+
+class DropdownOption(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name

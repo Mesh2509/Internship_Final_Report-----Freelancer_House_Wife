@@ -1,0 +1,21 @@
+
+In this Project, Below libraries are used so before run this project, install these python libraries as:
+
+1) pip install django
+2) pip install requests
+3) pip install djangorestframework
+
+and These are Project credentails as:
+
+Note : after installation of required libraries, run makemigrations and migrate command to actual implementation of tables in your system as:
+1) py manage.py makemigrations
+2) py manage.py migrate
+
+1) DJango Administration login details:
+    link : http://127.0.0.1:8000/admin
+    username : superuser
+    password : Elite123*
+
+2) Project admin login details:
+    username : admin
+    password : Elite123*
